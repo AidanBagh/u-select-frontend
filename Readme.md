@@ -110,34 +110,3 @@ src/
 
 ## Data Flow
 
-```
-Page (e.g. Screening.jsx)
-    │
-    ▼
-Custom Hook (useScreening.js)
-    │
-    ▼
-services/api.js  ──►  Backend API  ──►  Gemini + MongoDB
-```
-
-Pages never call the backend directly — everything goes through `services/api.js`.
-
----
-
-## CSS Convention (RULE 304)
-
-- Every component and page has its **own CSS file**, colocated with the JSX file.
-- Class names follow the pattern: `[component]-[element]-[modifier]`
-  - ✅ `jobcard-title`, `shortlisttable-row-highlighted`, `screening-reasoning-gap`
-  - ❌ `title`, `row`, `gap`
-- Only `index.css` is global (CSS variables + reset).
-
----
-
-## Adding Features Safely
-
-- **New page** (e.g. Settings): add `pages/Settings/Settings.jsx` + `Settings.css`, register the route in `App.jsx` — nothing else changes.
-- **New reusable component**: add under `components/` in its own folder — isolated by default.
-- **New API call**: add a function to `services/api.js` only — pages never import fetch directly.
-- **New shared state**: extend `context/AppContext.jsx` — hooks consume it, pages stay clean.
-- **New data concern** (e.g. auth): add `hooks/useAuth.js` — no existing hooks are touched.
