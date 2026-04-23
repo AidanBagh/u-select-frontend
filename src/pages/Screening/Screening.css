@@ -1,0 +1,128 @@
+.screening-page {
+  padding: 2rem 2.5rem;
+  max-width: 960px;
+}
+
+.screening-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: color 0.12s;
+}
+
+.screening-back:hover {
+  color: var(--blue);
+}
+
+.screening-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.75rem;
+  gap: 1rem;
+}
+
+.screening-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.screening-sub {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+.screening-run-btn {
+  padding: 0.5rem 1.25rem;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.screening-run-btn:hover:not(:disabled) {
+  background: var(--blue-dark);
+}
+
+.screening-run-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.screening-spinner-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.screening-spinner {
+  width: 28px;
+  height: 28px;
+  border: 3px solid var(--border);
+  border-top-color: var(--blue);
+  border-radius: 50%;
+  animation: screening-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes screening-spin {
+  to { transform: rotate(360deg); }
+}
+
+.screening-spinner-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.screening-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.screening-meta-dot {
+  color: var(--border);
+}
+
+.screening-empty {
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.screening-loading {
+  padding: 2rem 2.5rem;
+  color: var(--text-muted);
+}
+
+.screening-error {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: var(--red-light);
+  color: var(--red);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+}

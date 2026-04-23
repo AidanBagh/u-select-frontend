@@ -1,0 +1,66 @@
+.jobcard-container {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--blue);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.15s, border-color 0.15s, transform 0.15s;
+  cursor: pointer;
+}
+
+.jobcard-container:hover {
+  box-shadow: var(--shadow);
+  border-color: #cbd5e1;
+  transform: translateY(-2px);
+}
+
+.jobcard-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.jobcard-description {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.jobcard-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.25rem;
+}
+
+.jobcard-reqs {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.jobcard-link {
+  font-size: 0.8rem;
+  color: #fff;
+  font-weight: 500;
+  background: var(--blue);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius);
+  transition: background 0.15s, transform 0.1s;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.jobcard-link:hover {
+  background: var(--blue-dark, #1d4ed8);
+  transform: translateY(-1px);
+  text-decoration: none;
+}

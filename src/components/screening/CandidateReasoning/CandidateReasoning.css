@@ -1,0 +1,32 @@
+.candidate-reasoning-card {
+  background: var(--blue-light);
+  border: 1px solid #bfdbfe;
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 0.25rem 0;
+}
+
+.candidate-reasoning-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
+.candidate-reasoning-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.candidate-reasoning-score {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--blue);
+}
+
+.candidate-reasoning-text {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}

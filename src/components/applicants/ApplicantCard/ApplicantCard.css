@@ -1,0 +1,152 @@
+.applicant-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow 0.15s;
+}
+
+.applicant-card:hover {
+  box-shadow: var(--shadow);
+}
+
+.applicant-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.applicant-card-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--blue-light);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.applicant-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.applicant-card-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.applicant-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.2rem;
+}
+
+.applicant-card-meta-item {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.applicant-card-source {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.55rem;
+  border-radius: 99px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.applicant-card-source--upload {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.applicant-card-source--structured {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.applicant-card-body {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.applicant-card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.applicant-card-skill-tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  color: var(--text-secondary);
+}
+
+.applicant-card-skill-more {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  color: var(--text-muted);
+}
+
+.applicant-card-footer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.applicant-card-exp {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.applicant-card-edu {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+
+.applicant-card-actions {
+  padding: 0.75rem 1.5rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.applicant-card-view-btn {
+  width: 100%;
+  padding: 0.4rem 0;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: background 0.12s, color 0.12s, border-color 0.12s;
+}
+
+.applicant-card-view-btn:hover {
+  background: var(--blue-light);
+  color: var(--blue);
+  border-color: var(--blue);
+}

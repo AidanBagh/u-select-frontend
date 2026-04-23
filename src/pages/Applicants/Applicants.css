@@ -1,0 +1,175 @@
+.applicants-page {
+  padding: 2rem 2.5rem;
+  max-width: 900px;
+}
+
+.applicants-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  transition: color 0.12s;
+}
+
+.applicants-back:hover {
+  color: var(--blue);
+}
+
+.applicants-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.75rem;
+  gap: 1rem;
+}
+
+.applicants-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.applicants-sub {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-top: 0.2rem;
+}
+
+.applicants-topbar-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.applicants-upload-btn {
+  padding: 0.45rem 1rem;
+  background: transparent;
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.applicants-upload-btn:hover {
+  background: var(--blue-light);
+}
+
+.applicants-manual-btn {
+  padding: 0.45rem 1rem;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.applicants-manual-btn:hover {
+  background: var(--blue-dark);
+}
+
+/* Modal overlay */
+.applicants-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 2rem;
+}
+
+.applicants-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.applicants-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.applicants-modal-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.applicants-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem;
+  border-radius: var(--radius);
+  transition: background 0.15s, color 0.15s;
+}
+
+.applicants-modal-close:hover {
+  background: var(--bg);
+  color: var(--text-primary);
+}
+
+.applicants-modal-body {
+  padding: 1.75rem;
+  overflow-y: auto;
+}
+
+.applicants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.applicants-empty {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: var(--surface);
+  border: 1px dashed var(--border);
+  border-radius: var(--radius-lg);
+}
+
+.applicants-empty-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.applicants-empty-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+}
+
+.applicants-loading,
+.applicants-error {
+  padding: 2rem 2.5rem;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.applicants-error {
+  color: var(--red);
+}

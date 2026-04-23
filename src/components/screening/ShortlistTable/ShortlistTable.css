@@ -1,0 +1,131 @@
+.shortlist-table-wrapper {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.shortlist-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.shortlist-table-th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.shortlist-table-td {
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.shortlist-table-row:last-child .shortlist-table-td {
+  border-bottom: none;
+}
+
+.shortlist-table-row--shortlisted {
+  background: #f0fdf4;
+}
+
+.shortlist-table-rank-col {
+  width: 3rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.shortlist-table-score-col {
+  width: 180px;
+}
+
+.shortlist-table-status-col {
+  width: 130px;
+}
+
+.shortlist-table-action-col {
+  width: 100px;
+  text-align: right;
+}
+
+.shortlist-table-name {
+  font-weight: 500;
+}
+
+.shortlist-table-score-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.shortlist-table-score-track {
+  flex: 1;
+  height: 6px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.shortlist-table-score-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.3s ease;
+}
+
+.shortlist-table-score-num {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  width: 2rem;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.shortlist-table-chip {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 99px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.shortlist-table-chip--yes {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.shortlist-table-chip--no {
+  background: var(--bg);
+  color: var(--text-muted);
+}
+
+.shortlist-table-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.65rem;
+  font-size: 0.8rem;
+  color: var(--blue);
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.shortlist-table-toggle:hover {
+  background: var(--blue-light);
+}
+
+.shortlist-table-reasoning-cell {
+  padding: 0.5rem 1rem 0.75rem;
+  background: var(--bg);
+}

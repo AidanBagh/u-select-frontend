@@ -1,0 +1,141 @@
+.upload-form {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.upload-form-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.upload-form-error {
+  font-size: 0.85rem;
+  color: var(--red);
+  background: var(--red-light);
+  padding: 0.6rem 0.875rem;
+  border-radius: var(--radius);
+}
+
+.upload-form-file-input {
+  display: none;
+}
+
+.upload-form-dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.15s, background 0.15s;
+  background: var(--bg);
+}
+
+.upload-form-dropzone:hover {
+  border-color: var(--blue);
+  background: var(--blue-light);
+}
+
+.upload-form-dropzone--has-file {
+  border-style: solid;
+  border-color: var(--blue);
+  background: var(--blue-light);
+}
+
+.upload-form-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.upload-form-placeholder-icon {
+  color: var(--text-muted);
+}
+
+.upload-form-placeholder-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.upload-form-placeholder-hint {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.upload-form-file-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--blue);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.upload-form-file-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+.upload-form-file-remove {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.2rem;
+  flex-shrink: 0;
+}
+
+.upload-form-file-remove:hover {
+  color: var(--red);
+}
+
+.upload-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+.upload-form-cancel-btn {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: background 0.15s;
+}
+
+.upload-form-cancel-btn:hover {
+  background: var(--bg);
+}
+
+.upload-form-submit-btn {
+  padding: 0.5rem 1.25rem;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.upload-form-submit-btn:hover:not(:disabled) {
+  background: var(--blue-dark);
+}
+
+.upload-form-submit-btn:disabled {
+  opacity: 0.6;
+}

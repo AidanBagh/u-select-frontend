@@ -1,0 +1,109 @@
+.structured-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.structured-form-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.structured-form-error {
+  font-size: 0.85rem;
+  color: var(--red);
+  background: var(--red-light);
+  padding: 0.6rem 0.875rem;
+  border-radius: var(--radius);
+}
+
+.structured-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.structured-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.structured-form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.structured-form-hint {
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.structured-form-input,
+.structured-form-textarea {
+  padding: 0.6rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: var(--bg);
+  outline: none;
+  transition: border-color 0.15s;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.structured-form-input:focus,
+.structured-form-textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-light);
+  background: var(--surface);
+}
+
+.structured-form-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  padding-top: 0.5rem;
+}
+
+.structured-form-cancel-btn {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  transition: background 0.15s;
+}
+
+.structured-form-cancel-btn:hover {
+  background: var(--bg);
+}
+
+.structured-form-submit-btn {
+  padding: 0.5rem 1.25rem;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.structured-form-submit-btn:hover:not(:disabled) {
+  background: var(--blue-dark);
+}
+
+.structured-form-submit-btn:disabled {
+  opacity: 0.6;
+}
+
+@media (max-width: 560px) {
+  .structured-form-row {
+    grid-template-columns: 1fr;
+  }
+}

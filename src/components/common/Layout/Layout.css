@@ -1,0 +1,226 @@
+.layout-root {
+  display: flex;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.layout-sidebar {
+  width: 190px;
+  min-width: 190px;
+  background: var(--sidebar-bg);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 10;
+}
+
+.layout-sidebar-brand {
+  padding: 1.75rem 1.5rem 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.layout-sidebar-logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.5px;
+}
+
+.layout-sidebar-tagline {
+  font-size: 0.72rem;
+  color: var(--sidebar-text);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.layout-nav {
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.layout-sidebar-bottom {
+  padding: 0.75rem;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.layout-logout-btn {
+  background: none;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.layout-logout-btn:hover {
+  color: #fca5a5;
+  background: rgba(239, 68, 68, 0.12);
+}
+
+.layout-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius);
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.12s, color 0.12s;
+}
+
+.layout-nav-item:hover {
+  background: var(--sidebar-hover);
+  color: var(--sidebar-text-active);
+}
+
+.layout-nav-item--active,
+.layout-nav-item--active:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: var(--sidebar-text-active);
+}
+
+.layout-nav-icon {
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+.layout-main {
+  margin-left: 190px;
+  flex: 1;
+  min-width: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  overflow-y: auto;
+}
+
+/* Chat toggle button — fixed bottom-right */
+.layout-chat-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  z-index: 40;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.layout-chat-toggle:hover {
+  background: var(--blue-dark);
+  box-shadow: 0 6px 20px rgba(59, 130, 246, 0.45);
+}
+
+.layout-nav-item {
+  text-decoration: none;
+}
+
+.layout-mobile-header {
+  display: none;
+}
+
+.layout-mobile-close {
+  display: none;
+}
+
+.layout-overlay {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .layout-sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .layout-sidebar--open {
+    transform: translateX(0);
+  }
+  
+  .layout-sidebar-brand {
+    position: relative;
+  }
+  
+  .layout-mobile-close {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--sidebar-text);
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  
+  .layout-main {
+    margin-left: 0;
+    width: 100vw;
+  }
+  
+  .layout-mobile-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    gap: 1rem;
+  }
+  
+  .layout-mobile-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .layout-mobile-logo {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+    letter-spacing: -0.5px;
+  }
+  
+  .layout-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 5;
+    backdrop-filter: blur(2px);
+  }
+
+  .layout-chat-toggle-label {
+    display: none;
+  }
+}
+
