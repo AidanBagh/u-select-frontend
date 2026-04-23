@@ -1,3 +1,5 @@
+// Always use the relative /api path so the Netlify _redirects proxy catches it
+// and securely forwards it to the VPS backend without exposing the IP.
 const BASE = '/api';
 
 const FRIENDLY_ERRORS = {
