@@ -2,6 +2,15 @@
 
 > React (Vite) + JavaScript — Recruiter-facing dashboard
 
+## About Umurava Select
+**Umurava Select** is an AI-powered applicant screening and shortlisting platform designed to help recruiters process candidates more efficiently. 
+
+**How it works:**
+1. **Create Jobs:** Recruiters define job postings with detailed requirements.
+2. **Collect Applicants:** Candidates can be added via manual structured profile entry or file uploads (CSV, PDF, etc.).
+3. **AI Screening:** The system uses AI to evaluate each applicant against the job description, analyzing strengths, gaps, and relevance.
+4. **Ranked Shortlist:** Recruiters receive a ranked list of the top candidates, complete with AI-generated reasoning to make informed hiring decisions.
+
 ---
 
 ## Folder Tree
