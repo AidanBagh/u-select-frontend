@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, Briefcase, Users, Menu, X, MessageSquare, Settings, LogOut, ClipboardList } from 'lucide-react';
 import ChatBox from '../../chat/ChatBox/ChatBox';
@@ -14,6 +15,7 @@ const nav = [
 function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(window.innerWidth > 768);
+  const navigate = useNavigate();
 
   return (
     <div className={`layout-root ${isChatOpen ? 'layout-root--chat-open' : ''}`}>
@@ -47,17 +49,14 @@ function Layout({ children }) {
           ))}
         </nav>
         <div className="layout-sidebar-bottom">
-          <NavLink
-            to="/settings"
-            onClick={() => setIsOpen(false)}
-            className={({ isActive }) =>
-              'layout-nav-item' + (isActive ? ' layout-nav-item--active' : '')
-            }
+          <button
+            className="layout-nav-item layout-logout-btn"
+            onClick={() => { setIsOpen(false); navigate('/dashboard'); }}
           >
             <Settings size={16} className="layout-nav-icon" />
             <span>Settings</span>
-          </NavLink>
-          <button className="layout-nav-item layout-logout-btn" onClick={() => {}}>
+          </button>
+          <button className="layout-nav-item layout-logout-btn" onClick={() => navigate('/')}>
             <LogOut size={16} className="layout-nav-icon" />
             <span>Log Out</span>
           </button>
