@@ -16,6 +16,7 @@
   left: 0;
   height: 100vh;
   z-index: 10;
+  transition: transform 0.3s ease;
 }
 
 .layout-sidebar-brand {
@@ -132,6 +133,20 @@
   box-shadow: 0 6px 20px rgba(59, 130, 246, 0.45);
 }
 
+/* Push main content when chat panel is open — wide screens only */
+@media (min-width: 1100px) {
+  .layout-root--chat-open .layout-main {
+    margin-right: 350px;
+  }
+}
+
+/* Tablet: sidebar + chat would crush content — chat becomes overlay */
+@media (min-width: 769px) and (max-width: 1099px) {
+  .layout-root--chat-open .layout-main {
+    margin-right: 0;
+  }
+}
+
 .layout-nav-item {
   text-decoration: none;
 }
@@ -151,11 +166,11 @@
 @media (max-width: 768px) {
   .layout-sidebar {
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
   }
   
   .layout-sidebar--open {
     transform: translateX(0);
+    z-index: 1002;
   }
   
   .layout-sidebar-brand {
@@ -215,7 +230,7 @@
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.4);
-    z-index: 5;
+    z-index: 1001;
     backdrop-filter: blur(2px);
   }
 

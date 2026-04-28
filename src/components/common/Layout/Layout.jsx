@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { LayoutDashboard, Briefcase, Users, Menu, X, MessageSquare, Settings, LogOut, ClipboardList } from 'lucide-react';
@@ -14,8 +14,21 @@ const nav = [
 
 function Layout({ children }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(window.innerWidth > 768);
+  const [isChatOpen, setIsChatOpen] = useState(() => window.innerWidth >= 1100);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1100) {
+        setIsChatOpen(false);
+      }
+      if (window.innerWidth >= 768) {
+        setIsOpen(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className={`layout-root ${isChatOpen ? 'layout-root--chat-open' : ''}`}>
